@@ -2,7 +2,7 @@ import sys
 from scipy import signal
 import numpy as np
 from matplotlib import pyplot as plt
-from State_Space_Model_Inputs import *
+from state_space_model_inputs import *
 
 # ------------------------------------------------------------------------------
 # DC Motor Equations
@@ -87,8 +87,8 @@ for key in Robot_Inputs:
 
     ax1.plot(t1, (60.0*np.transpose(y1)[1])/(2.0*np.pi), label=key)
     ax2.plot(t1, np.transpose(y1)[0], label=key)
-    print ('%3.1f,%i' % (np.transpose(y1)[0][-1],
-                         (60.0*np.transpose(y1)[1][-1]) / (2.0*np.pi)))
+    print ('%s,%3.1f,%i' % (key, np.transpose(y1)[0][-1],
+                            (60.0*np.transpose(y1)[1][-1]) / (2.0*np.pi)))
 
 
 # ------------------------------------------------------------------------------
