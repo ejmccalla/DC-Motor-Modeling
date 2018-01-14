@@ -1,6 +1,7 @@
 This project contains the source needed to model the open-loop dynamics and
 steady-state of a brushed DC motor.  The differential equations governing
 the motor behavior are below.
+
 -------------------------------------------------------------------------
 DC Motor Equations
 
@@ -16,6 +17,7 @@ T = Kt*i - F*w  - J*dw/dt
 Using a state-space model to solve for the equations requires creating the
 matrices below.  For further reading, refer to the following link:  
 https://www.ee.usyd.edu.au/tutorials_online/matlab/examples/motor/motor.html
+
 -------------------------------------------------------------------------
 State-Space Representation
 
