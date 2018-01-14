@@ -2,19 +2,19 @@ This project contains the source needed to model the open-loop dynamics and
 steady-state of a brushed DC motor.  The differential equations governing
 the motor behavior are below.
 
-V = input voltage, T = input load torque
-i = ouput current, w = output rotational velocity
-R = Winding resistance, Kv = Voltage constant, L = Winding inductance
-F = Viscous damping, Kt = Torque coefficient, J = Rotor moment-of-inertia
+V = input voltage, T = input load torque<br>
+i = ouput current, w = output rotational velocity<br>
+R = Winding resistance, Kv = Voltage constant, L = Winding inductance<br>
+F = Viscous damping, Kt = Torque coefficient, J = Rotor moment-of-inertia<br>
 
-V = R*i  + Kv*w + L*di/dt
-T = Kt*i - F*w  - J*dw/dt
+V = R*i  + Kv*w + L*di/dt<br>
+T = Kt*i - F*w  - J*dw/dt<br>
 
 
 Using a state-space model to solve for the equations requires creating the
 matrices below.  For further reading, refer to the following link:  
 https://www.ee.usyd.edu.au/tutorials_online/matlab/examples/motor/motor.html
-
+<pre>
               _______A_______   __X__   ______B______   __U__
               |             |   |   |   |           |   |   |
       __ __   __           __   __ __   __         __   __ __
@@ -30,7 +30,7 @@ https://www.ee.usyd.edu.au/tutorials_online/matlab/examples/motor/motor.html
  |    | = |      | * |   | + |      | * |   |
  | y2 |   | 0  1 |   | w |   | 0  0 |   | T |
  __  __   __    __   __ __   __    __   __ __
-
+</pre>
 
 The state_space_model_inputs.py file is where the user can make changes to
 the inputs of the model.  For a CIS 4607 team member, copy the 
